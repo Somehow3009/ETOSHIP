@@ -1,0 +1,37 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  position: relative;
+  height: 75px;
+}
+
+.page-name {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.navigate {
+  margin-top: 10px;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 60px;
+}
+
+.navigate a{
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.navigate a:hover{
+  color: red;
+}
+
+.bell-icon {
+  width: 200px;
+  justify-content: right;
+  cursor: pointer;
+}
