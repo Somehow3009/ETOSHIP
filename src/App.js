@@ -1,12 +1,14 @@
 import './App.css';
-import Header from './header'
-import Welcome from './Welcome'
+import Header from './layout/header'
+import AdminDashboard from './AdminDashboard/admin-dashboard';
+import Navigate from './layout/navigate'
 
 function App() {
   return (
     <div className="App">
       <Header pageName='Admin Dashboard'/>
-      <Welcome />
+      <AdminDashboard/>
+      <Navigate />
     </div>
   );
 }

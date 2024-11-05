@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  position: relative;
+  height: 75px;
+  box-shadow: 0px 7px 15px 0px #bebebe;  
+}
+
+.notification {
+  width: 200px;
+  justify-content: right;
+  cursor: pointer;
+}

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .App-logo {
@@ -35,4 +37,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.primary-container {
+  padding: 50px 250px;
+}
+
+.primary-container > div {
+  margin-bottom: 70px;
+}
+
+.container {
+  border-radius: 30px;
+  box-shadow: 0px 7px 15px 0px #bebebe;  
 }
