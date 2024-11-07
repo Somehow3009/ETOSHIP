@@ -1,14 +1,23 @@
 import './App.css';
-import Header from './layout/header'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AdminDashboard from './AdminDashboard/admin-dashboard';
-import Navigate from './layout/navigate'
+import DriverDashboard from './Driver/driver-dashboard'
+import JobList from './Driver/job-list';
 
 function App() {
   return (
     <div className="App">
-      <Header pageName='Admin Dashboard'/>
-      <AdminDashboard/>
-      <Navigate />
+
+      <Router>
+        <Routes>
+
+          <Route path='/admin' element={<AdminDashboard />} />
+            
+          <Route path='/driver' element={<DriverDashboard />} />
+          <Route path='/driver/job-list' element={<JobList />} />
+
+        </Routes>
+      </Router>
     </div>
   );
 }

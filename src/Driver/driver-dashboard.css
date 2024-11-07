@@ -1,0 +1,12 @@
+.job-current-content {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.info {
+    padding: 10px;
+    padding-left: 50px;
+    text-align: left;
+    font-size: 18x;
+    font-weight: 100;
+}

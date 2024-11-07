@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -22,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 18px;
   color: white;
 }
 
@@ -39,15 +39,23 @@
   }
 }
 
-.primary-container {
-  padding: 50px 250px;
-}
-
-.primary-container > div {
-  margin-bottom: 70px;
-}
-
 .container {
-  border-radius: 30px;
-  box-shadow: 0px 7px 15px 0px #bebebe;  
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 15px;
+  margin-left: 15px;
 }

@@ -1,0 +1,29 @@
+/* Card Styles */
+.job-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.info {
+    font-size: 16px;
+    color: #333;
+}
+
+.button {
+    background-color: #ee4b4b;
+    color: white;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 60%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff5252;
+}
