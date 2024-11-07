@@ -14,7 +14,7 @@ function DriverDashboard(props){
     };
 
     return (
-        <div>
+        <>
             <Header pageName='Driver Dashboard' img='./img/driver-img.png' />
             <div className='container'>
                 <InforCard cardTitle='Current Job' info={cur_job_info} buttonTitle='Start Trip' />
@@ -22,7 +22,7 @@ function DriverDashboard(props){
                 <InforCard cardTitle='Next Available Task' info={cur_job_info} buttonTitle='View Detail' />
             </div>
             <Nav active='home'/>
-        </div>
+        </>
     );
 }
 

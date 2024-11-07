@@ -2,18 +2,15 @@
     display: grid;
     grid-template-columns: auto auto;
     gap: 10px;
-}
-
-.summary > div {
-    height: 200px; 
+    margin-bottom: 20px;
 }
 
 .summary-title {
-    text-align: left;
+    text-align: center;
     padding: 20px;
 }
 
 .summary-content {
     color: #C62828;
-    font-size: 64px;
+    font-size: 48px;
 }

@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AdminDashboard from './AdminDashboard/admin-dashboard';
+import AdminDashboard from './Admin/admin-dashboard';
 import DriverDashboard from './Driver/driver-dashboard'
 import JobList from './Driver/job-list';
 

@@ -4,17 +4,17 @@ import ActiveTask from "./active-task";
 import Header from '../layout/header'
 import Nav from '../layout/nav'
 
-function AdminDashboard(){
+function AdminDashboard(props){
     return (
-        <div>
+        <>
             <Header pageName='Admin Dashboard'/>
-            <div className='primary-container'>
+            <div className='container'>
                 <Map mapTitle='Driver Location' />
                 <Summary numberOfOnlineDriver='24' numberOfOnlineInProcess='18' />
                 <ActiveTask />
             </div>
             <Nav />
-        </div>
+        </>
     );
 }
 

@@ -2,12 +2,10 @@ import './summary.css'
 
 function Summary(props){
     return (
-        <div className='summary-container'>
-            <div className='title'>
-                Summary
-            </div>
+        <div className='card'>
+            <h2> Summary </h2>
             <div className='summary'>
-                <div className='container'>
+                <div>
                     <div className='summary-title'>
                         Online Driver
                     </div>
@@ -15,7 +13,7 @@ function Summary(props){
                         {props.numberOfOnlineDriver}
                     </div>
                 </div>
-                <div className='container'>
+                <div>
                     <div className='summary-title'>
                         Online in Process
                     </div>
