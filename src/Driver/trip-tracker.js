@@ -9,14 +9,14 @@ import { GiPathDistance } from "react-icons/gi";
 import { IoMdInformationCircle } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { RiMessage2Fill } from "react-icons/ri";
-import jobData from './joblist.json';  // Import JSON data
+import jobData from './joblist.json';
+import { useParams } from 'react-router-dom';
 
 function TripTracker(props){
 
-    // Tìm thông tin customer từ jobList
-    const customerInfo = jobData.jobs.find(job => job.customerID === '1');
+    const { customerId } = useParams();
+    const customerInfo = jobData.jobs.find(job => job.customerID === customerId);
 
-    // Kiểm tra nếu không tìm thấy customer
     if (!customerInfo) {
         return <div>Customer not found</div>;
     }

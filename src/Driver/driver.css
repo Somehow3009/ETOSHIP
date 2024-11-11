@@ -49,6 +49,11 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     justify-content: space-between;
     align-items: center;
+    transition: transform 0.2s;
+}
+
+.job-card:hover {
+    transform: translateX(5px);
 }
 
 .job-info {
@@ -135,6 +140,8 @@
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-call, .btn-message {
@@ -295,4 +302,176 @@
 
 .nav-item.active {
     color: #E53935;
+}
+
+.filter-section {
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.arrow-down {
+    margin-left: auto;
+}
+
+.earning-container {
+    text-align: left;
+    margin-top: 45px;
+}
+
+.total-earning-content {  
+    text-align: left;
+    padding: 24px 45px;
+    background-color: #E0E0E080;
+    border-radius: 15px;
+}
+
+.total-earning {    
+    color: #E53935;
+    font-size: 64px;    
+}
+
+.last-updated {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.breakdown-item:hover {
+    transform: translateX(5px);
+}
+
+.breakdown-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.breakdown-icon {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breakdown-amount {
+    font-weight: 400;
+}
+
+.action-buttons-earnings {
+    margin: 16px;
+}
+
+.request-payment-btn {
+    width: 100%;
+    margin-bottom: 12px;
+    border: 1px solid #ee4b4b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;  
+}
+
+.export-report-btn {
+    background: white;
+    color: #ee4b4b;
+    width: 100%;
+    margin-bottom: 12px;
+    border: 1px solid #ee4b4b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;  
+}
+
+.profile-section {
+    padding: 24px 16px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-image img {
+    width: 120px;
+    border-radius: 50%;
+    margin: 24px;
+}
+
+.driver-name {
+    font-size: 45px
+}
+
+.driver-id {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.edit-btn, .change-btn {
+    width: 30%;
+}
+
+.info-section {
+    margin: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.info-item {
+    margin: 20px 10px;
+}
+
+.info-label {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-weight: 500;
+}
+
+.settings-button {
+    font-size: 18px;
+    border: 1px solid #00000080;
+    border-radius: 10px;
+    width: 93%;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.settings-button:hover {
+    transform: translateY(-2px);
+}
+
+.settings-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

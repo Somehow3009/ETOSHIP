@@ -13,11 +13,8 @@ import jobData from './joblist.json';
 
 function JobDetail(){
     const { customerId } = useParams();
-    
-    // Tìm thông tin customer từ jobList
     const customerInfo = jobData.jobs.find(job => job.customerID === customerId);
 
-    // Kiểm tra nếu không tìm thấy customer
     if (!customerInfo) {
         return <div>Customer not found</div>;
     }
