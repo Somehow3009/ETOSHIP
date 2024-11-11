@@ -1,0 +1,31 @@
+.header-detail {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header-detail-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header-title {
+    margin-left: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+}

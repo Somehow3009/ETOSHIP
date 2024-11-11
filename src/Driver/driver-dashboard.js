@@ -1,6 +1,6 @@
-import './driver-dashboard.css'
-import Header from '../layout/header'
-import Nav from '../layout/nav'
+import './driver.css';
+import Header from '../layout/header';
+import Nav from '../layout/nav';
 import InforCard from './info-card';
 import Map from '../Map/map';
 

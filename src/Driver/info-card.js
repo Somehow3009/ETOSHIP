@@ -1,7 +1,6 @@
-import './info-card.css'
+import './driver.css';
 
 function InforCard(props){
-
     const { pickup, dropoff, distance, ETA } = props.info;
 
     return (
