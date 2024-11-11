@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <header className="header">
       <div className="header-content">
-          <div className="header-title">Driver Dashboard</div>
+          <div className="header-title">{props.pageName}</div>
           <div className="header-right">
               <FaBell />
               {

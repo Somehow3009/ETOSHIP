@@ -1,0 +1,20 @@
+
+.request-location{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+
+}
+.icon {
+    font-size: 24px;
+
+}
+
+.input {
+    border: none; 
+    outline: none; 
+    flex: 1;  
+    text-align: center; 
+    font-size: 24px;
+}
