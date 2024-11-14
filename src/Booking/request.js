@@ -34,13 +34,3 @@ function Request(props){
 
 export default Request;
 
-{/* <div className='search-card'>
-            <div className="search-container">
-            <span className="search-icon"><CiSearch /> </span>
-            <input
-                type="text"
-                placeholder="Search for pickup and dropoff"
-                className="search-input"
-            />
-            </div>
-        </div> */}

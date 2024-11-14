@@ -5,6 +5,7 @@ import DriverDashboard from './Driver/driver-dashboard'
 import JobList from './Driver/job-list';
 import CustomerDashboard from './Customer/customer-dashboard';
 import BookingInterface from './Booking/booking';
+import PaymentOptions from './Payment/payment-option';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path='/booking-interface' element={<BookingInterface />} />
           <Route path='/driver' element={<DriverDashboard />} />
           <Route path='/driver/job-list' element={<JobList />} />
-
+          <Route path='/payment-options' element={<PaymentOptions />} />
         </Routes>
       </Router>
     </div>
