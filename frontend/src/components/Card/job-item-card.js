@@ -10,7 +10,7 @@ function JobCard(props){
     }
 
     const jobDetail = () => {
-        navigate(`/driver/job-detail/${customerID}`);
+        navigate(`/driver/job-details/${customerID}`);
     }
 
     return (

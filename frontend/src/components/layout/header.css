@@ -29,8 +29,7 @@
   margin-right: 100px;
 }
 
-.notification-icon {
-  color: #333;
+.noti-icon {
   cursor: pointer;
 }
 
@@ -39,4 +38,5 @@
   height: 35px;
   border-radius: 50%;
   background-color: #ddd;
+  cursor: pointer;
 }

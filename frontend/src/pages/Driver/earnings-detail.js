@@ -12,6 +12,7 @@ function EarningsDetails(props) {
         { month: 'Tháng 3', value: 5 },
         { month: 'Tháng 4', value: 10 },
         { month: 'Tháng 5', value: 2 },
+        { month: 'Tháng 6', value: 24 },
     ];
 
     return (

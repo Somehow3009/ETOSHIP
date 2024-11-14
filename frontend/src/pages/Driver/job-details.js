@@ -1,5 +1,4 @@
 import './driver.css';
-import HeaderDetail from '../../components/layout/header-detail';
 import Map from '../../components/Map/map';
 
 import { FaPhone, FaMoneyBills  } from 'react-icons/fa6';
@@ -11,7 +10,7 @@ import { useParams } from 'react-router-dom';
 
 import jobData from './joblist.json';
 
-function JobDetail(){
+function JobDetails(){
     const { customerId } = useParams();
     const customerInfo = jobData.jobs.find(job => job.customerID === customerId);
 
@@ -21,7 +20,6 @@ function JobDetail(){
 
     return (
         <>
-            <HeaderDetail title='Job Details' />
             <div className='container'>
                 <Map/>
                 <div className='card'>
@@ -89,4 +87,4 @@ function JobDetail(){
     );
 }
 
-export default JobDetail;
+export default JobDetails;
