@@ -73,3 +73,23 @@
 .proceed-button:hover{
     background-color: #b71c1c;
 }
+
+
+.fare-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-left: 25px;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.fare-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-weight: normal;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+

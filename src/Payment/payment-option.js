@@ -3,6 +3,7 @@ import Nav from '../layout/nav';
 import PaymentMethod from "./payment-method";
 import AddPaymentMethodButton from "./button";
 import { ProceedButton } from './button'
+import PaymentDetail from "./payment-detail";
 
 function PaymentOptions(props){
     return (
@@ -14,7 +15,7 @@ function PaymentOptions(props){
             <div className="container">
                 <PaymentMethod/>
                 <AddPaymentMethodButton/>
-
+                <PaymentDetail/>
                 <ProceedButton/>
             </div>
            
