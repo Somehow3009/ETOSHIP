@@ -1,4 +1,3 @@
-import './driver.css';
 import { useNavigate } from 'react-router-dom'
 
 function JobCard(props){
@@ -15,7 +14,7 @@ function JobCard(props){
     }
 
     return (
-        <div className='job-card'>
+        <div className='card job-card'>
             <div className='job-info'>
                 <div className='customer-name name'> {customerName} </div>
                 <div className='address'> {pickupLocation} </div>

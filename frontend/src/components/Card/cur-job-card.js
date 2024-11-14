@@ -1,6 +1,4 @@
-import './driver.css';
-
-function InforCard(props){
+function CurJobCard(props){
     const { pickup, dropoff, distance, ETA } = props.info;
 
     return (
@@ -16,5 +14,5 @@ function InforCard(props){
         </div>
     );
 }
-
-export default InforCard;
+    
+export default CurJobCard;

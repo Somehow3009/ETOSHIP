@@ -1,6 +1,6 @@
 import './driver.css';
-import HeaderDetail from '../layout/header-detail';
-import Map from '../Map/map';
+import HeaderDetail from '../../components/layout/header-detail';
+import Map from '../../components/Map/map';
 
 import { FaPhone, FaMoneyBills  } from 'react-icons/fa6';
 import { RiMessage2Fill } from 'react-icons/ri';

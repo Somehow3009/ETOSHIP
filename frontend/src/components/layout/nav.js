@@ -1,9 +1,10 @@
 import './nav.css'
 import { FaHome, FaUser, FaRegChartBar, FaListUl } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 function Navigate(props){
     const navigate = useNavigate();
+    const location = useLocation();
 
     const goToJobList = () => {
         navigate('/driver/job-list');
@@ -21,18 +22,20 @@ function Navigate(props){
         navigate('/driver/profile');
     }
 
+    const currentPath = location.pathname;
+
     return (
         <nav className="bottom-nav">
-            <a onClick={goToHome} className={`nav-item ${ props.active === 'home' && 'active'}`}>
+            <a onClick={goToHome} className={`nav-item ${currentPath === '/driver' && 'active'}`}>
                 <FaHome className='icon'/>
             </a>
-            <a onClick={goToJobList} className={`nav-item ${ props.active === 'list' && 'active'}`}>
+            <a onClick={goToJobList} className={`nav-item ${currentPath === '/driver/job-list' && 'active'}`}>
                 <FaListUl className='icon'/>
             </a>
-            <a onClick={goToChart} className={`nav-item ${ props.active === 'chart' && 'active'}`}>
+            <a onClick={goToChart} className={`nav-item ${currentPath === '/driver/chart' && 'active'}`}>
                 <FaRegChartBar className='icon'/>
             </a>
-            <a onClick={goProfile} className={`nav-item ${ props.active === 'profile' && 'active'}`}>
+            <a onClick={goProfile} className={`nav-item ${currentPath === '/driver/profile' && 'active'}`}>
                 <FaUser className='icon'/>
             </a>
         </nav>

@@ -11,17 +11,15 @@
     font-weight: 100;
 }
 
-/* Card Styles */
 .job-details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: auto auto;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
 .info {
     font-size: 16px;
-    color: #333;
 }
 
 .button {
@@ -42,11 +40,6 @@
 }
 
 .job-card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     justify-content: space-between;
     align-items: center;
     transition: transform 0.2s;
@@ -57,6 +50,7 @@
 }
 
 .job-info {
+    margin-left: 14px;
     font-weight: 500;
     display: grid;
     grid-template-areas: 
@@ -66,7 +60,7 @@
 }
 
 .customer-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
     grid-area: name;
@@ -84,12 +78,14 @@
     text-align: right;
     grid-area: time;
     padding: 20px;
+    margin-right: 14px;
 }
 
 .button-group {
     display: flex;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 6px;
+    margin-left: 14px;
 }
 
 .btn-start, .btn-view, .btn-accept, .btn-reject {
