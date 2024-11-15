@@ -11,6 +11,7 @@ import EarningsDetails from './earnings-detail';
 import DriverProfile from './driver-profile';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { FaHome, FaListUl, FaRegChartBar, FaUser } from 'react-icons/fa';
+import tmp_avt from '../../assets/img/tmp_avt.jpg';
 
 const pageItems = [
     {
@@ -43,7 +44,6 @@ const DriverIndex = () => {
   const pageName = currentPage ? currentPage.pageName : 'Unknown Page';
 
   return (
-
     <> 
       {
         location.pathname.startsWith('/driver/job-details/') ? (
@@ -51,7 +51,7 @@ const DriverIndex = () => {
         ) : location.pathname.startsWith('/driver/trip-tracker/') ? (
             <HeaderDetail title='Trip Tracker'/>
         ) : (
-            <Header pageName={pageName} img='https://picsum.photos/100/100?random=2' />
+            <Header pageName={pageName} img={tmp_avt} />
         )
       }
       <div className='container'>   

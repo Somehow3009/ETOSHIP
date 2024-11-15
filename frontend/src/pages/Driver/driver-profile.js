@@ -1,5 +1,6 @@
 import { MdPrivacyTip } from 'react-icons/md';
 import { FaBell } from 'react-icons/fa';
+import tmp_avt from '../../assets/img/tmp_avt.jpg';
 
 const DriverProfile = () => {
 
@@ -15,13 +16,13 @@ const DriverProfile = () => {
           year: 1999,
           color: 'Green'
         }
-    };  
+    };
 
     return (    
         <>
             <div className='profile-section'>
                 <div className='profile-image'>
-                    <img src='https://picsum.photos/100/100?random=2' alt='Customer Avatar' />
+                    <img src={tmp_avt} alt='Customer Avatar' />
                 </div>
                 <div className='driver-name'>{driverProfile.name}</div>
                 <div className='driver-id'>Driver ID: {driverProfile.id}</div>
@@ -71,7 +72,6 @@ const DriverProfile = () => {
                     <div className='info-value'>{driverProfile.vehicle.color}</div>
                 </div>
             </div>
-
 
             <button className='settings-button card'>    
                 <div className='settings-icon'>

@@ -1,7 +1,7 @@
 import './nav.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function Navigate(props){
+function Nav(props){
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -9,7 +9,7 @@ function Navigate(props){
         <nav className='bottom-nav'>
             {
                 props.items.map((item, index) => (
-                    <a onClick={() => navigate(item.path)} className={`nav-item ${location.pathname === item.path && 'active'}`}>
+                    <a key={index} onClick={() => navigate(item.path)} className={`nav-item ${location.pathname === item.path && 'active'}`}>
                         <item.icon className='icon'/>
                     </a>
                 ))
@@ -18,4 +18,4 @@ function Navigate(props){
     );
 }
 
-export default Navigate;
+export default Nav;

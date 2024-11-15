@@ -81,12 +81,12 @@ function EarningsDetails(props) {
                 </div>
             </div>
 
-            <div class='action-buttons-earnings'>
-                <button class='button request-payment-btn'>
+            <div className='action-buttons-earnings'>
+                <button className='button request-payment-btn'>
                     <MdPayments />
                     Request Payment
                 </button>
-                <button class='button export-report-btn'>
+                <button className='button export-report-btn'>
                     <FaFileExport />
                     Export Report
                 </button>

@@ -10,6 +10,7 @@ function JobList(props){
             {
                 jobList.map((job, index) => (
                     <JobCard
+                        key={index}
                         index={index} 
                         info={job} 
                     />
