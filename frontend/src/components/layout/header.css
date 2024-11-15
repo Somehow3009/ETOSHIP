@@ -8,6 +8,12 @@
   z-index: 1000;
 }
 
+.header-red {
+  background: red;
+  color: white;
+}
+
+
 .header-title {
   padding: 14px;
   padding-left: 18px;

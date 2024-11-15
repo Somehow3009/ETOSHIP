@@ -5,7 +5,7 @@ import { FaBell } from 'react-icons/fa';
 function Header(props) {
 
   return (
-    <header className='header'>
+    <header className={`header ${props.color === 'red' && 'header-red'}`}>
       <div className='header-content'>
           <div className='header-title'>{ props.pageName }</div>
           <div className='header-right'>

@@ -1,5 +1,4 @@
 import './admin.css';
-import Header from '../../components/layout/header'
 import { IoMdSearch } from "react-icons/io";
 import { FaEdit } from "react-icons/fa";
 
@@ -22,7 +21,6 @@ const vehicleList = [
 const VehicleList = () => {
     return (
         <>
-            <Header pageName='Vehicle List' addNew={addNewVehicle} addNewTitle='Add New Vehicle'/>
             <div className='container'>
                 <div className="search-container card">
                     <div className="search-wrapper">

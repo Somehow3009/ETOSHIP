@@ -7,13 +7,13 @@ function HeaderDetail(props){
     const navigate = useNavigate()
 
     const goToJobList = () => {
-        navigate('/driver/job-list');
+        navigate(props.link);
     }
 
     return (
-        <div className="header-detail">
+        <div className={`header-detail ${props.color === 'red' && 'header-detail-red'}`}>
             <div className="header-detail-content">
-                <button onClick={goToJobList} className="back-btn">
+                <button onClick={goToJobList} className={`back-btn ${props.color === 'red' && 'back-btn-red'}`}>
                     <FaArrowLeft />
                 </button>
                 <span className="header-title">{props.title}</span>

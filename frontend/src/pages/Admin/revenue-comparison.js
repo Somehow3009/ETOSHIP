@@ -1,12 +1,20 @@
 import './admin.css';
-import Header from '../../components/layout/header'
 import {PiExportBold} from "react-icons/pi";
+import BarChart from '../../components/Chart/bar-chart';
 
 function RevenueComparison() {
     
+    const chartData = [
+        { month: 'Tháng 1', value: 12 },
+        { month: 'Tháng 2', value: 19 },
+        { month: 'Tháng 3', value: 5 },
+        { month: 'Tháng 4', value: 10 },
+        { month: 'Tháng 5', value: 2 },
+        { month: 'Tháng 6', value: 24 },
+    ];
+
     return (
         <>
-            <Header pageName='Revenue Comparison'/>
             <div className='container'>
                 <div className="filter">
                     <label htmlFor="driverFilter">Filter Drivers</label>
@@ -27,7 +35,9 @@ function RevenueComparison() {
                 <div className="card revenue-card">
                     <div className="revenue-info">
                         <h2>Driver Earnings Comparison</h2>
-                        
+                        <div className='total-earning-content chart-container'>
+                            <BarChart chartData={chartData} />
+                        </div>
                     </div>
                 </div>
                 <div className="card revenue-card">
@@ -41,6 +51,7 @@ function RevenueComparison() {
                     <button class='button finance-report-btn'>
                         <PiExportBold />
                         Export Report
+                        
                     </button>
                 </div>
             </div>

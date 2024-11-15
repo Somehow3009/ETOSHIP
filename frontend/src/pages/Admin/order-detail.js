@@ -1,5 +1,4 @@
 import './admin.css';
-import Header from '../../components/layout/header'
 import { GrMapLocation } from "react-icons/gr";
 import { FaLocationArrow } from "react-icons/fa6";
 import { IoIosTimer } from "react-icons/io";
@@ -7,7 +6,6 @@ import { IoIosTimer } from "react-icons/io";
 function OrderDetail() {
     return (
         <>
-            <Header pageName='Order Detail'/>
             <div className='container'>
                 <div className="order-info">
                     <h2>Order #123</h2>

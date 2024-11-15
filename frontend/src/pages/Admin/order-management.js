@@ -1,6 +1,6 @@
 import './admin.css';
-import Header from '../../components/layout/header'
 import { IoMdSearch } from "react-icons/io";
+import { useNavigate } from 'react-router-dom'
 
 const orderList = [
     { orderID: 1, orderName: "Order #123", customer: "Khanh", driver: "Phu Minh", status: "Pending" },
@@ -11,9 +11,14 @@ const orderList = [
 ];
 
 function OrderList() {
+    const navigate = useNavigate();
+
+    const viewdetail = () => {
+        navigate('/admin/orderdetail');
+    }
+    
     return (
         <>
-            <Header pageName='Order Management'/>
             <div className='container'>
                 <div className="search-container card">
                     <div className="search-wrapper">
@@ -37,7 +42,7 @@ function OrderList() {
                                     <div className="customer-number">Customer: {order.customer}</div>
                                     <div className="driver-number">Driver: {order.driver}</div>
                                     <div className="group-button">
-                                        <button className="button view-detail">View Detail</button>
+                                        <button onClick={viewdetail} className="button view-detail">View Detail</button>
                                         <button className="button update-status">Update Status</button>
                                     </div>
                                 </div>

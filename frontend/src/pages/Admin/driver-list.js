@@ -1,7 +1,7 @@
-import Header from '../../components/layout/header'
 import { IoMdSearch } from "react-icons/io";
 import './admin.css'
-
+import { useNavigate } from 'react-router-dom'
+    
 const addNewDriver = () => {
 
 }
@@ -13,9 +13,14 @@ const driverList = [
 ];
 
 function DriverList(){
+    const navigate = useNavigate();
+
+    const driverprofile = () => {
+        navigate('/admin/driverprofile');
+    }
+    
     return (
         <>
-            <Header pageName='Driver List'addNew={addNewDriver} addNewTitle='Add New Driver'/>
             <div className='container'>
                 <div className="search-container card">
                         <div className="search-wrapper">
@@ -36,7 +41,7 @@ function DriverList(){
                                     <h2>{driver.driverName}</h2>
                                     <div className="total-trips">Customer: {driver.totalTrips}</div>
                                     <div className="income">Driver: {driver.income}</div>
-                                    <button className="button driver-profile">Driver Profile</button>
+                                    <button onClick={driverprofile} className="button driver-profile">Driver Profile</button>
                                 </div>
                                 {
                                     driver.status === 'Online' ? (

@@ -1,11 +1,16 @@
 import './admin.css';
-import Header from '../../components/layout/header'
 import { PiExportBold } from "react-icons/pi";
+import { useNavigate } from 'react-router-dom'
 
 function FinaceReport() {
+    const navigate = useNavigate();
+
+    const revenuecomparison = () => {
+        navigate('/admin/revenuecomparison');
+    }
+    
     return (
         <>
-            <Header pageName='Finace Report'/>
             <div className='container'>
                 <div className="filter">
                     <label htmlFor="timeFilter">Filter</label>
@@ -33,7 +38,12 @@ function FinaceReport() {
                         <h1 className="revenue-amount">$ 15.352.179</h1>
                     </div>
                 </div>
-
+                <div class='buttons-finance-report'>
+                    <button onClick={revenuecomparison} class='button finance-report-btn'>
+                        <PiExportBold />
+                        Revenue Comparison
+                    </button>
+                </div>
                 <div class='buttons-finance-report'>
                     <button class='button finance-report-btn'>
                         <PiExportBold />
