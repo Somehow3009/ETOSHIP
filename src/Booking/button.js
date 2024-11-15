@@ -1,4 +1,6 @@
 import './button.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function BookingButton({ text, onClick }){
     return (
@@ -11,9 +13,15 @@ function BookingButton({ text, onClick }){
 }
 
 function ConfirmButton ({ text, onClick }){
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/payment-options'); 
+
+    };
   return (
       <div >
-          <button className="confirm-button" onClick={onClick}>
+          <button className="confirm-button" onClick={handleClick}>
         {text} Confirm Booking
       </button>
       </div>

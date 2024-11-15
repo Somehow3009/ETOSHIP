@@ -27,6 +27,7 @@
   align-items: center;
   gap: 35px;
   margin-right: 100px;
+  cursor: pointer;
 }
 
 .notification-icon {
