@@ -1,11 +1,11 @@
 import React from 'react';
-import './detail.css';
 import avt from './avatar.png'
+import './trip.css'
 
-function BookingDetailsCard() {
+function DriverInfor() {
   return (
     <div className="card">
-      <h2>Booking Details</h2>
+      <h2>Drvier Information</h2>
         <div className="card-content">
             <div className="driver-info">
               <img 
@@ -23,10 +23,6 @@ function BookingDetailsCard() {
                 <span>ETA:</span>
                 <span>15 minutes</span>
             </div>
-            <div className="info-row">
-                <span>Trip Fare</span>
-                <span>$ 45.000</span>
-            </div>
             </div>
         </div>
     </div>
@@ -35,4 +31,4 @@ function BookingDetailsCard() {
   );
 }
 
-export default BookingDetailsCard;
+export default DriverInfor;
