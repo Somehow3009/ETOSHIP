@@ -22,6 +22,7 @@ function JobDetails(){
         <>
             <div className='container'>
                 <Map/>
+
                 <div className='card'>
                     <div className='customer-info'>
                         <img src='https://picsum.photos/100/100?random=2' alt='Customer Avatar' className='customer-avatar' />
@@ -45,7 +46,7 @@ function JobDetails(){
                 <div className='trip-details card'>
                     <h2>Trip Detail</h2>
                     
-                    <div className='trip-item'>
+                    <div className='trip-detail-item'>
                         <TbPointFilled />
                         <div className='trip-text'>
                             <div className='trip-label'>Pick up Location</div>
@@ -53,7 +54,7 @@ function JobDetails(){
                         </div>
                     </div>
 
-                    <div className='trip-item'>
+                    <div className='trip-detail-item'>
                         <FaFlagCheckered />
                         <div className='trip-text'>
                             <div className='trip-label'>Dropoff Location</div>
@@ -61,7 +62,7 @@ function JobDetails(){
                         </div>
                     </div>
 
-                    <div className='trip-item'>
+                    <div className='trip-detail-item'>
                         <MdAccessTimeFilled />
                         <div className='trip-text'>
                             <div className='trip-label'>Estimated Time of Arrival</div>
@@ -69,7 +70,7 @@ function JobDetails(){
                         </div>
                     </div>
 
-                    <div className='trip-item'>
+                    <div className='trip-detail-item'>
                         <FaMoneyBills />
                         <div className='trip-text'>
                             <div className='trip-label'>Estimated Fare</div>

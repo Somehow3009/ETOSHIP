@@ -1,35 +1,10 @@
-.job-current-content {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.info {
-    padding: 10px;
-    padding-left: 50px;
-    text-align: left;
-    font-size: 18x;
-    font-weight: 100;
-}
-
-.job-details {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.info {
-    font-size: 16px;
-}
-
 .button {
     background-color: #E53935;
     color: white;
     padding: 12px;
     margin-top: 10px;
-    border-radius: 14px;
+    border-radius: 18px;
     border: none;
-    width: 60%;
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -37,6 +12,25 @@
 
 .button:hover {
     opacity: 0.9;
+}
+
+.cur-job-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cur-job-info {
+    padding: 10px;
+    padding-left: 50px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.cur-job-btn {
+    width: 40%;
 }
 
 .job-card {
@@ -50,7 +44,7 @@
 }
 
 .job-info {
-    margin-left: 14px;
+    padding: 14px;
     font-weight: 500;
     display: grid;
     grid-template-areas: 
@@ -154,13 +148,10 @@
 }
 
 .trip-details {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
     margin-bottom: 50px;
 }
 
-.trip-item {
+.trip-detail-item {
     display: flex;
     align-items: start;
     margin: 40px;
@@ -168,7 +159,7 @@
     gap: 15px;
 }
 
-.trip-item svg {
+.trip-detail-item svg {
     color: #E53935;
     font-size: 28px;
     margin-right: 15px;
@@ -248,35 +239,6 @@
     margin-right: 10px;
 }
 
-.route-item {
-    display: flex;
-    align-items: start;
-    margin: 40px;
-    margin-bottom: 15px;
-    gap: 15px;
-}
-
-.route-item svg {
-    color: #E53935;
-    font-size: 28px;
-    margin-right: 15px;
-}
-
-.route-text {
-    flex-grow: 1;
-    text-align: left;
-}
-
-.route-label {
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-.route-value {
-    color: #666;
-    font-weight: 400;
-}
-
 .traffic-alert {
     background-color: #E53935;
     color: white;
@@ -285,19 +247,6 @@
 .traffic-alert div {
     margin-bottom: 20px;
     font-weight: 400;
-}
-
-.nav-item {
-    background: none;
-    border: none;
-    color: #666;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav-item.active {
-    color: #E53935;
 }
 
 .filter-section {
@@ -470,4 +419,124 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .info {
+        font-size: 14px;
+    }
+
+    .button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .customer-name {
+        font-size: 16px;
+    }
+
+    .customer-id {
+        font-size: 12px;
+    }
+
+    .trip-title {
+        font-size: 20px;
+    }
+
+    .trip-value {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .cur-job-content {
+        grid-template-columns: auto;
+    }
+
+    .cur-job-info {
+        padding: 2px;
+        font-size: 14px;
+        padding-left: 30px; 
+    }
+
+    .cur-job-btn {
+        width: 200px;
+        margin-top: 5px;
+    }
+
+    .job-info {
+        padding-bottom: 5px;
+    }
+
+    .customer-name {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .address {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .time {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .button-group {
+        margin: 0px 20px;
+    }
+
+    .customer-avatar {
+        width: 60px;
+    }
+
+    .action-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        margin-bottom: 10px;
+    }
+
+    .btn-call, .btn-message {
+        width: 80%; /* Full width for buttons */
+    }
+
+    .trip-detail-item {
+        margin: 10px;
+        margin-left: 24px;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .trip-detail-item svg {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .start-trip-btn {
+        width: 240px;
+    }
+
+    .total-earning-content {  
+        padding: 18px 32px;
+    }
+
+    .total-earning {    
+        font-size: 47px;    
+    }
+
+    .edit-btn, .change-btn {
+        width: 80%;
+    }
+
+    .info-section {
+        margin: 10px;
+    }
+
+    .info-item {
+        margin: 20px 0px;
+        padding: 10px 20px;
+    }
+
 }

@@ -37,30 +37,30 @@ function TripTracker(props){
                 </div>
             </div>
 
-            <div className='card'>
+            <div className='trip-details card'>
                 <h2>Route Information</h2>
                 
-                <div className='route-item'>
+                <div className='trip-detail-item'>
                     <TbPointFilled />
-                    <div className='route-text'>
-                        <div className='route-label'>Current Location</div>
-                        <div className='route-value'>{customerInfo.pickupLocation}</div>
+                    <div className='trip-text'>
+                        <div className='trip-label'>Current Location</div>
+                        <div className='trip-value'>{customerInfo.pickupLocation}</div>
                     </div>
                 </div>
 
-                <div className='route-item'>
+                <div className='trip-detail-item'>
                     <FaFlagCheckered />
-                    <div className='route-text'>
-                        <div className='route-label'>Destination Location</div>
-                        <div className='route-value'>{customerInfo.dropoffLocation}</div>
+                    <div className='trip-text'>
+                        <div className='trip-label'>Destination Location</div>
+                        <div className='trip-value'>{customerInfo.dropoffLocation}</div>
                     </div>
                 </div>
 
-                <div className='route-item'>
+                <div className='trip-detail-item'>
                     <GiPathDistance />
-                    <div className='route-text'>
-                        <div className='route-label'>Distance Remaining</div>
-                        <div className='route-value'>3 km</div>
+                    <div className='trip-text'>
+                        <div className='trip-label'>Distance Remaining</div>
+                        <div className='trip-value'>3 km</div>
                     </div>
                 </div>
             </div>

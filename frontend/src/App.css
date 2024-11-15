@@ -67,3 +67,13 @@ button {
 a {
   cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+  .card {
+    padding: 10px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+}

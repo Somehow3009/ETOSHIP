@@ -23,6 +23,13 @@ const BarChart = (props) => {
 
   const options = {
     responsive: true,
+    scales: {
+        y: {
+            ticks: {
+                stepSize: 6,
+            },
+        },
+    },
     plugins: {
       legend: {
         position: 'top',
@@ -34,7 +41,7 @@ const BarChart = (props) => {
     }
   };
 
-  return <Bar data={data} options={options} />;
+  return <Bar data={data} options={options}/>;
 };
 
 export default BarChart;

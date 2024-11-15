@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   background: white;
-  padding: 15px 0;
+  padding: 14px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -10,7 +10,6 @@
 
 .header-title {
   padding: 14px;
-  padding-left: 18px;
   font-size: 24px;
 }
 
@@ -19,14 +18,14 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 18px;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 35px;
-  margin-right: 100px;
+  gap: 28px;
+  margin-right: 40px;
 }
 
 .noti-icon {
@@ -39,4 +38,25 @@
   border-radius: 50%;
   background-color: #ddd;
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .header-title {
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 20px;
+  }
+
+  .header-right {
+    gap: 15px;
+    margin-right: 18px;
+  }
+
+  .profile-pic img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+  }
 }

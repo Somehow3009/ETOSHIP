@@ -24,3 +24,9 @@
 .nav-item.active {
     color: #ee4b4b;
 }
+
+@media (max-width: 1000px){
+    .bottom-nav {
+        padding: 15px 0;
+    }
+}

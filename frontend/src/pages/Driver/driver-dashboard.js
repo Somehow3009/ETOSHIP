@@ -1,4 +1,4 @@
-import InforCard from '../../components/Card/cur-job-card';
+import CurJobCard from '../../components/Card/cur-job-card';
 import Map from '../../components/Map/map';
 
 function DriverDashboard(props){
@@ -12,9 +12,9 @@ function DriverDashboard(props){
 
     return (
         <>
-            <InforCard cardTitle='Current Job' info={cur_job_info} buttonTitle='Start Trip' />
+            <CurJobCard cardTitle='Current Job' info={cur_job_info} buttonTitle='Start Trip' />
             <Map mapTitle='Map Route'/>
-            <InforCard cardTitle='Next Available Task' info={cur_job_info} buttonTitle='View Detail' />
+            <CurJobCard cardTitle='Next Available Task' info={cur_job_info} buttonTitle='View Detail' />
         </>
     );
 }
