@@ -29,9 +29,9 @@ function DriverList(){
                         </div>
                 </div>
                 <div className='status-filters'>
-                    <span className="status-badge status-all">All</span>
-                    <span className="status-badge status-online">Online</span>
-                    <span className="status-badge status-offline">Offline</span>
+                    <span className="status-filters-badge status-all">All</span>
+                    <span className="status-filters-badge status-online">Online</span>
+                    <span className="status-filters-badge status-offline">Offline</span>
                 </div>
                 <div className='driver-list-container'>
                     {
@@ -41,7 +41,7 @@ function DriverList(){
                                     <h2>{driver.driverName}</h2>
                                     <div className="total-trips">Customer: {driver.totalTrips}</div>
                                     <div className="income">Driver: {driver.income}</div>
-                                    <button onClick={driverprofile} className="button driver-profile">Driver Profile</button>
+                                    <button onClick={driverprofile} className="button">Driver Profile</button>
                                 </div>
                                 {
                                     driver.status === 'Online' ? (

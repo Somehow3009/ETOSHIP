@@ -44,14 +44,13 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    
 }
 
 .button:hover {
     background-color: #ff5252;
 }
 
-.button.view-detail, .button.update-status {
+.button.update-status {
     width: 25%;
     min-width: 70px;
     margin-left: 20px;
@@ -123,7 +122,6 @@
 }
 
 /* CSS cho phần search */
-
 .search-container {
     border-radius: 25px;
 }
@@ -183,20 +181,30 @@
     text-align: left;
 }
 /* CSS cho các phần tử liên quan status */
+.status-filters {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.status-filters-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 500px;
+    text-align: center;
+    margin: auto 10px;
+    color: white;
+}
 
 .status-badge {
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 500px;
     text-align: center;
     margin: auto 10px;
     width: 100px;
     color: white;
-}
-
-.status-filters {
-    margin-bottom: 20px;
 }
 
 .status-all {
@@ -215,15 +223,15 @@
     background-color: rgb(106, 106, 46);
 }
 
-.status-inprogress {
-    background-color: rgb(85, 44, 116);
-}
-
 .status-pending.detail {
     display: flex;
     margin: 10px 10px;
     width: 50px;
     padding: 6px 12px;
+}
+
+.status-inprogress {
+    background-color: rgb(85, 44, 116);
 }
 
 /* CSS các phần khác */
@@ -243,6 +251,20 @@
     text-align: right;
 }
 
+#price {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#rating {
+    color: #FFC107;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+  
 /* CSS finance report */
 .filter {
     display: flex;

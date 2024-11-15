@@ -53,7 +53,7 @@ function OrderDetail() {
                             Update Status
                         </button>
                         <button class='button update-state-2-btn'>
-                            Update Status
+                            Cancelled
                         </button>
                     </div>
                 </div>

@@ -27,11 +27,11 @@ function OrderList() {
                     </div>
                 </div>
                 <div className='status-filters'>
-                    <span className="status-badge status-all">All</span>
-                    <span className="status-badge status-pending">Pending</span>
-                    <span className="status-badge status-inprogress">In Progress</span>
-                    <span className="status-badge status-completed">Completed</span>
-                    <span className="status-badge status-cancelled">Cancelled</span>
+                    <span className="status-filters-badge status-all">All</span>
+                    <span className="status-filters-badge status-pending">Pending</span>
+                    <span className="status-filters-badge status-inprogress">In Progress</span>
+                    <span className="status-filters-badge status-completed">Completed</span>
+                    <span className="status-filters-badge status-cancelled">Cancelled</span>
                 </div>
                 <div className='order-list-container'>
                     {
@@ -42,8 +42,7 @@ function OrderList() {
                                     <div className="customer-number">Customer: {order.customer}</div>
                                     <div className="driver-number">Driver: {order.driver}</div>
                                     <div className="group-button">
-                                        <button onClick={viewdetail} className="button view-detail">View Detail</button>
-                                        <button className="button update-status">Update Status</button>
+                                        <button onClick={viewdetail} className="button">View Detail</button>
                                     </div>
                                 </div>
                                 {

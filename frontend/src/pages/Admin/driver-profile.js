@@ -29,7 +29,17 @@ const DriverProfile = () => {
                 <button class='button update-state-2-btn'>
                     <TbLockDollar />Block Driver
                 </button>
-                
+                <h2 style={{ color: 'red', textAlign: 'left'}}>Recent Trips</h2>
+                <div className='card'>
+                    <div id="trip-details-container">
+                        <h2 id="trip-number">Trip #12345</h2>
+                        <p id="date">July 22, 2024</p>
+                        <p id="from">From: Titops</p>
+                        <p id="to">To: 123 456 789</p>
+                        <p id="price">$45,000</p>
+                        <p id="rating">Rating: 4.9</p>
+                    </div>
+                </div>
             </div>
         </>
     );

@@ -2,12 +2,11 @@ import './admin.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { FaHome, FaListUl, FaRegChartBar, FaUser } from 'react-icons/fa';
 import Header from '../../components/layout/header'
-import Nav from '../../components/layout/nav';
 import HeaderDetail from '../../components/layout/header-detail'
+import Nav from '../../components/layout/nav';
 import AdminDashboard from './admin-dashboard'
 import DriverList from './driver-list';
 import DriverProfile from './driver-profile';
-import VehicleList from './vehicle-list';
 import OrderManagement from './order-management';
 import OrderDetail from './order-detail';
 import FinanceReport from './finance-report';
@@ -34,23 +33,6 @@ const pageItems = [
       icon: FaRegChartBar, 
       path: '/admin/financereport'
     },
-    // {
-    //   pageName: 'Driver Profile',
-      
-    //   path: '/admin/driverprofile'
-    // },
-    // {
-    //   pageName: 'Vehicle List',
-    //   path: '/admin/vehiclelist'
-    // },
-    // {
-    //     pageName: 'Order Details',
-    //     path: '/admin/orderdetail'
-    // },
-    // {
-    //   pageName: 'Revenue Comparison',
-    //   path: '/admin/revenuecomparison'
-    // },
 ]
 
 const AdminIndex = () => {
@@ -77,7 +59,6 @@ const AdminIndex = () => {
             <Route index element={<AdminDashboard />} />
             <Route path="driverlist" element={<DriverList />} />
             <Route path="driverprofile" element={<DriverProfile />} />
-            <Route path="vehiclelist" element={<VehicleList />} />
             <Route path="ordermanagement" element={<OrderManagement />} />
             <Route path="orderdetail" element={<OrderDetail />} />
             <Route path="financereport" element={<FinanceReport />} />
