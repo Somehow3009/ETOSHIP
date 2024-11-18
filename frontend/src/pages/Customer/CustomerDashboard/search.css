@@ -1,0 +1,30 @@
+/*  */
+.search-card {
+    background: white;
+    border-radius: 25px;
+    padding: 0px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  }
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 8px 12px;
+    width: 95%;
+    margin-top: 10px;
+    background-color: white;
+  }
+  
+  .search-icon {
+    margin-right: 8px;
+    font-size: 24px;
+    color: #888;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    font-size: 24px;
+    width: 95%;
+  }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthIndex from './pages/Auth/index';
 import AdminIndex from './pages/Admin/index';
 import DriverIndex from './pages/Driver/index';
+import CustomerIndex from './pages/Customer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path='/*' element={<AuthIndex />} />
           <Route path='/admin/*' element={<AdminIndex />} />
           <Route path='/driver/*' element={<DriverIndex />} />
+          <Route path='/customer/*' element={<CustomerIndex />} />
 
         </Routes>
       </Router>

@@ -1,0 +1,22 @@
+/* TripItem.css */
+
+.trip-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  margin-bottom: 3px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1);
+  transition: border 0.2s;
+  font-weight: 400;
+}
+
+.trip-item:hover {
+  border: 2px solid #1976d2; 
+}
+
+.trip-price {
+  color: #616161;
+}

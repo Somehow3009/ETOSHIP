@@ -1,0 +1,97 @@
+.payment-card {
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  }
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.method {
+    display: flex;
+    margin-left: 16px;
+    width: 100%;
+}
+.card.selected {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.payment-option-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.option .icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.option span {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.add-payment-method-button {
+    width: 100%;
+    padding: 22px;
+    margin-top: 25px;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 18px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+
+}
+
+.add-payment-method-button:hover{
+    background-color: #f3f7f3;
+}
+
+.proceed-button{
+    width: 100%;
+    padding: 22px;
+    margin-top: 25px;
+    font-size: 18px;
+    color: white;
+    margin-top: 42px;
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+
+}
+
+.proceed-button:hover{
+    background-color: #b71c1c;
+}
+
+
+.fare-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-left: 25px;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.fare-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-weight: normal;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+

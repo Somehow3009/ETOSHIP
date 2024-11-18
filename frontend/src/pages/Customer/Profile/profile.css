@@ -1,0 +1,121 @@
+
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-header h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.customer-since {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.profile-info {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.label {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.edit-button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #c0c0c0;
+}
+
+.trip-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    margin-bottom: 3px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: border 0.2s;
+    font-weight: 400;
+  }
+  
+  .trip-item:hover {
+    border: 2px solid #1976d2; 
+  }
+  
+  .trip-price {
+    color: #616161;
+  }
+
+  
+  .payment-method-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.payment-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.payment-info {
+    flex: 1;
+    text-align: left;
+}
+
+
+
+.expiry-date {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    color: #777;
+    cursor: pointer;
+}
+
+.add-payment-button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-payment-button:hover {
+    background-color: #c0c0c0;
+}
