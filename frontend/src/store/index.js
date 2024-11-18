@@ -1,6 +1,5 @@
-
 import { configureStore } from '@reduxjs/toolkit';
-import authReducer from './slices/authSlice'; // Đảm bảo rằng file này tồn tại và có nội dung chính xác
+import authReducer from './slices/authSlice';
 
 const store = configureStore({
   reducer: {

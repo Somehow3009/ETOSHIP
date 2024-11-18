@@ -1,6 +1,6 @@
 import './Auth.css';
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../services/authService';
 import { loginSuccess } from '../../store/slices/authSlice';
@@ -12,39 +12,32 @@ function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  const user = useSelector((state) => state.auth.user);
-
-  if (isAuthenticated) {
-    navigate(`/${user.role}`);
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    const userData = await login({ email, password });
+    setError(null);
 
-    if (userData) {
-      dispatch(loginSuccess(userData));
-      navigate(`/${userData.role}`)
-    } else {
-      setError('Login failed. Please try again.');
-    }
+    const response = await login({ email, password });
+
+    if (response.success) {
+      const { data } = response;
+      dispatch(loginSuccess(data));
+      navigate(`/${data.role}`)
+    } else setError(response.message);
     
   };
 
   return (
     <form className='form active' id='login-form' onSubmit={handleSubmit}>
         <div className='form-group'>
-            <label>Email</label>
-            <input type='email' placeholder='Example@email.com' value={email} onChange={(e) => setEmail(e.target.value)} />
+          <label>Email</label>
+          <input type='email' placeholder='Example@email.com' value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <div className='form-group'>
-            <label>Password</label>
-            <input type='password' placeholder='At least 8 characters' value={password} onChange={(e) => setPassword(e.target.value)} />
-            <a href='#' className='forgot-password'>Forgot Password?</a>
+          <label>Password</label>
+          <input type='password' placeholder='At least 8 characters' value={password} onChange={(e) => setPassword(e.target.value)} />
+          <a href='#' className='forgot-password'>Forgot Password?</a>
         </div>
-        <button className='auth-btn button'>Login</button>
+        <button type='submit' className='auth-btn button'>Login</button>
         {error && <p className='error'>{error}</p>}
     </form>
   );
