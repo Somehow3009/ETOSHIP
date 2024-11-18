@@ -10,6 +10,7 @@ function CustomerInformation() {
                 <img 
                     src={avt}
                     className="avatar"
+                    alt='avt'
                 />
                 <div>
                     <h3>Hong Ngoc</h3>

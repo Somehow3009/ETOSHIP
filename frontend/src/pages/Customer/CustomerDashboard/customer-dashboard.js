@@ -1,6 +1,5 @@
-import Map from "../Map/map";
-import Header from '../layout/header'
-import Nav from '../layout/nav'
+import Map from "../../../components/Map/map";
+
 import Search from './search'
 import Button from './booking-button'
 import TripList from './TripList';
@@ -13,16 +12,14 @@ function AdminDashboard(props){
     ];
     return (
         <>
-            <Header pageName='Customer Dashboard'/>
            
-            <div className='container'>
+            
                 <Search />
                 <Map mapTitle='Available Vehicle' />
                 <Button/>
                 <TripList trips={trips} />
-            </div>
+           
             
-            <Nav />
         </>
     );
 }

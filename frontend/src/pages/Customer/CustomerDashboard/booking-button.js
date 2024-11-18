@@ -5,7 +5,7 @@ function Button({ text, onClick }){
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/booking-interface'); 
+    navigate('/customer/booking'); 
 
     };
     return (

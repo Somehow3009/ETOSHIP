@@ -1,5 +1,4 @@
-import Header from "../layout/header";
-import Nav from '../layout/nav';
+
 import CustomerInformation from "./customer-information";
 import './profile.css'
 import TripList from "./TripList";
@@ -13,16 +12,14 @@ function CustomerProfile(props){
     ];
     return (
         <>
-            <Header pageName='Customer Profile'/>
+          
            
-           <div className='container'>
+          
                 
                 <CustomerInformation/>
                 <TripList trips={trips} />
                 <PaymentMethodCard/>
-           </div>
             
-            <Nav/>
             
         </>
     );

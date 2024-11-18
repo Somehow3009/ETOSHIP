@@ -8,7 +8,7 @@ function Header(props) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/customer-profile'); 
+    navigate('/customer/profile'); 
 
     };
   return (

@@ -16,7 +16,7 @@ function ConfirmButton ({ text, onClick }){
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/payment-options'); 
+    navigate('/customer/payment'); 
 
     };
   return (

@@ -16,7 +16,7 @@ function ProceedButton({ text, onClick }){
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/trip-tracking'); 
+    navigate('/customer/trip-tracking'); 
 
     };
     return (
