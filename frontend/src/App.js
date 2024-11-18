@@ -1,7 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import DriverIndex from './pages/Driver/index';
 import AuthIndex from './pages/Auth/index';
+import AdminIndex from './pages/Admin/index';
+import DriverIndex from './pages/Driver/index';
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
         <Routes>
           
           <Route path='/*' element={<AuthIndex />} />
+          <Route path='/admin/*' element={<AdminIndex />} />
           <Route path='/driver/*' element={<DriverIndex />} />
-          
+
         </Routes>
       </Router>
     </div>

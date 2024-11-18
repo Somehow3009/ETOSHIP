@@ -47,9 +47,9 @@ const DriverIndex = () => {
     <> 
       {
         location.pathname.startsWith('/driver/job-details/') ? (
-            <HeaderDetail title='Job Details'/>
+            <HeaderDetail title='Job Details' link='/driver/job-list' />
         ) : location.pathname.startsWith('/driver/trip-tracker/') ? (
-            <HeaderDetail title='Trip Tracker'/>
+            <HeaderDetail title='Trip Tracker' link='/driver/job-list' />
         ) : (
             <Header pageName={pageName} img={tmp_avt} />
         )
