@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthIndex from './pages/Auth/index';
 import AdminIndex from './pages/Admin/index';
 import DriverIndex from './pages/Driver/index';
-import CustomerIndex from './pages/Customer';
+import CustomerIndex from './pages/Customer/index';
 
 function App() {
   return (

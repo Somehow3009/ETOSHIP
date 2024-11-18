@@ -10,6 +10,7 @@ function PaymentOptions() {
     };
 
     return (
+        
         <div className="payment-options">
             <div className={`payment-card ${selectedOption === 'credit' ? 'selected' : ''}`}>
                 <label className="payment-option-item">

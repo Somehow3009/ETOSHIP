@@ -1,16 +1,12 @@
-import './search.css'
-import { CiSearch } from "react-icons/ci";
+import { IoMdSearch } from "react-icons/io";
 
 function Search(props) {
     return (
-        <div className='search-card'>
-            <div className="search-container">
-            <span className="search-icon"><CiSearch /> </span>
-            <input
-                type="text"
-                placeholder="Search for pickup and dropoff"
-                className="search-input"
-            />
+
+        <div className="search-container card">
+            <div className="search-wrapper">
+                <IoMdSearch className='search-icon'/>
+                <input type="text" className="search-input" placeholder="Search order..." />
             </div>
         </div>
     );

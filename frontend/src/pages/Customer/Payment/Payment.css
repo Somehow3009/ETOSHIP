@@ -23,7 +23,10 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    
+}
+
+.payment-option-item > input {
+    width: 20px;
 }
 
 .option .icon {
