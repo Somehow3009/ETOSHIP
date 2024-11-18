@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "email": "admin@gmail.com",
+            "password": "admin123",
+            "role": "admin"
+        },
+        {
+            "email": "driver@gmail.com",
+            "password": "driver123",
+            "role": "driver"
+        },
+        {
+            "email": "customer@gmail.com",
+            "password": "customer123",
+            "role": "customer"
+        }
+    ]
+}
