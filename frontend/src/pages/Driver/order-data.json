@@ -1,0 +1,40 @@
+{
+    "orders": [
+        {
+            "orderId": "1",
+            "customerName": "Mr. Khang",
+            "orderContent": "Chị muốn ăn bánh canh...",
+            "time": "10:30 AM",
+            "accept": true,
+            "note": "Khách hàng muốn thêm ớt",
+            "address": "123 Main St, HCM"
+        },
+        {
+            "orderId": "2",
+            "customerName": "Mr. Minh",
+            "orderContent": "Chị muốn ăn một tô phở...",
+            "time": "11:45 AM",
+            "accept": false,
+            "note": "Khách hàng không ăn hành",
+            "address": "456 Second St, HCM"
+        },
+        {
+            "orderId": "3",
+            "customerName": "Ms. Ngoc",
+            "orderContent": "Chị muốn ăn gỏi cuốn...",
+            "time": "3:30 PM",
+            "accept": false,
+            "note": "Khách hàng muốn thêm tôm",
+            "address": "789 Third St, HCM"
+        },
+        {
+            "orderId": "4",
+            "customerName": "Mr. Thanh",
+            "orderContent": "Chị muốn ăn cơm tấm...",
+            "time": "9:30 AM",
+            "accept": false,
+            "note": "Khách hàng muốn không có đồ chua",
+            "address": "101 Fourth St, HCM"
+        }
+    ]
+}

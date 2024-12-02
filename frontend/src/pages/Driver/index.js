@@ -1,37 +1,42 @@
 import './driver.css';
 
-import Header from '../../components/layout/header';
 import HeaderDetail from '../../components/layout/header-detail';
-import Nav from '../../components/layout/nav';
-import DriverDashboard from './driver-dashboard';
-import JobList from './job-list';
-import JobDetails from './job-details';
-import TripTracker from './trip-tracker';
+import NotiBell from '../../components/NotiBell';
+import BottomNav from '../../components/layout/BottomNav';
+import DriverDashboard from './Dashboard';
+import OrderList from './OrderList';
+import OrderDetails from './OrderDetails';
 import EarningsDetails from './earnings-detail';
 import DriverProfile from './driver-profile';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { FaHome, FaListUl, FaRegChartBar, FaUser } from 'react-icons/fa';
-import tmp_avt from '../../assets/img/tmp_avt.jpg';
+import { AiFillHome, AiOutlineHome  } from "react-icons/ai";
+import { PiListBulletsLight, PiListBulletsFill  } from "react-icons/pi";
+import { BsBarChart, BsBarChartFill  } from "react-icons/bs";
+import { FaRegUser, FaUser } from "react-icons/fa";
 
 const pageItems = [
     {
-        pageName: 'Driver Dashboard',
-        icon: FaHome, 
+        pageName: 'Home',
+        icon: AiOutlineHome,
+        iconActive: AiFillHome,
         path: '/driver'
     },
     {
-        pageName: 'Job List',
-        icon: FaListUl, 
-        path: '/driver/job-list'
+        pageName: 'Order List',
+        icon: PiListBulletsLight, 
+        iconActive: PiListBulletsFill,
+        path: '/driver/order-list'
     },
     {
-        pageName: 'Earnings Details',
-        icon: FaRegChartBar, 
-        path: '/driver/earnings-details'
+        pageName: 'Statistics',
+        icon: BsBarChart,
+        iconActive: BsBarChartFill,
+        path: '/driver/statistics'
     },
     {
-        pageName: 'Driver Profiles',
-        icon: FaUser, 
+        pageName: 'Profiles',
+        icon: FaRegUser,
+        iconActive: FaUser, 
         path: '/driver/profile'
     },
 ]
@@ -44,32 +49,31 @@ const DriverIndex = () => {
   const pageName = currentPage ? currentPage.pageName : 'Unknown Page';
 
   return (
-    <> 
-      {
-        location.pathname.startsWith('/driver/job-details/') ? (
-            <HeaderDetail title='Job Details' link='/driver/job-list' />
-        ) : location.pathname.startsWith('/driver/trip-tracker/') ? (
-            <HeaderDetail title='Trip Tracker' link='/driver/job-list' />
-        ) : (
-            <Header pageName={pageName} img={tmp_avt} />
-        )
-      }
-      <div className='container'>   
+      <div className='container'>  
+        {
+          location.pathname.startsWith('/driver/order-details/') ? (
+              <HeaderDetail title='Order Details' link='/driver/order-list' />
+          ) : location.pathname.startsWith('/driver/trip-tracker/') ? (
+              <HeaderDetail title='Trip Tracker' link='/driver/order-list' />
+          ) : (
+            <div className='noti-container'>
+                <NotiBell />
+            </div>
+          )
+        }
         <Routes>
           <Route index element={<DriverDashboard />} />
-          <Route path='job-list' element={<JobList />} />
-          <Route path='job-details/:customerId' element={<JobDetails />} />
-          <Route path='trip-tracker/:customerId' element={<TripTracker />} />
+          <Route path='order-list' element={<OrderList />} />
+          <Route path='order-details/:orderId' element={<OrderDetails />} />
           <Route path='earnings-details' element={<EarningsDetails />} />
           <Route path='profile' element={<DriverProfile />} />
         </Routes>
+        {
+          (!location.pathname.startsWith('/driver/job-details/') && !location.pathname.startsWith('/driver/trip-tracker/')) && (
+            <BottomNav items={pageItems}/>
+          )
+        }
       </div>
-      {
-        (!location.pathname.startsWith('/driver/job-details/') && !location.pathname.startsWith('/driver/trip-tracker/')) && (
-            <Nav items={pageItems}/>
-        )
-      }
-    </>
   );
 };
 

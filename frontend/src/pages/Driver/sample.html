@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết đơn hàng</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #e0e5ec;
+            --shadow-color: #a3b1c6;
+            --light-shadow: #ffffff;
+            --text-color: #4a4a4a;
+            --red-color: #dc3545;
+        }
+
+        body {
+            background: var(--primary-color);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--primary-color);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 8px 8px 16px var(--shadow-color),
+                       -8px -8px 16px var(--light-shadow);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            font-size: 24px;
+            margin-right: 15px;
+            text-decoration: none;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px var(--shadow-color),
+                       -5px -5px 10px var(--light-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            box-shadow: inset 5px 5px 10px var(--shadow-color),
+                       inset -5px -5px 10px var(--light-shadow);
+        }
+
+        .title {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .customer-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: inset 5px 5px 10px var(--shadow-color),
+                       inset -5px -5px 10px var(--light-shadow);
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            box-shadow: 5px 5px 10px var(--shadow-color),
+                       -5px -5px 10px var(--light-shadow);
+        }
+
+        .customer-name {
+            color: var(--red-color);
+            font-weight: 600;
+        }
+
+        .card {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            box-shadow: 5px 5px 10px var(--shadow-color),
+                       -5px -5px 10px var(--light-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card-content {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .info-icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .receive-button {
+            width: 100%;
+            padding: 15px;
+            background: var(--red-color);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 5px 5px 10px var(--shadow-color),
+                       -5px -5px 10px var(--light-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .receive-button:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+        }
+
+        .receive-button:active {
+            transform: translateY(0);
+            box-shadow: inset 5px 5px 10px #b21f2d,
+                       inset -5px -5px 10px #dc3545;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .title {
+                font-size: 1.2em;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="#" class="back-button">←</a>
+            <div class="title">Order Detail</div>
+        </div>
+
+        <div class="customer-info">
+            <img src="https://picsum.photos/200/200?random=1" alt="Avatar" class="avatar">
+            <div class="customer-name">Customer Name</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Content:</div>
+            <div class="card-content">
+                Chỉ mượn ăn bánh canh của chị không ăn được của nên đừng lấy của nhé
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="info-item">
+                <span class="info-icon">🕒</span>
+                <div>
+                    <div class="card-title">Delivery Time:</div>
+                    <div class="card-content">23h00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                    <div class="card-title">Address:</div>
+                    <div class="card-content">123 Hoa Binh St, Cai Rang, Can Tho</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Note:</div>
+            <div class="card-content">
+                Nếu không thấy ai ở nhà thì để ở trước cổng
+            </div>
+        </div>
+
+        <button class="receive-button">Receive</button>
+    </div>
+
+    <script>
+        document.querySelector('.receive-button').addEventListener('click', function() {
+            this.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+                alert('Order received!');
+            }, 100);
+        });
+
+        document.querySelector('.back-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            history.back();
+        });
+    </script>
+</body>
+</html>

@@ -1,78 +1,135 @@
-.button {
-    background-color: #E53935;
-    color: white;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 18px;
+.noti-container {
+    position: relative;
+}
+
+.noti-bell {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     border: none;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    opacity: 0.9;
-}
-
-.cur-job-content {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.cur-job-info {
-    padding: 10px;
-    padding-left: 50px;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.cur-job-btn {
-    width: 40%;
-}
-
-.job-card {
-    justify-content: space-between;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
-    transition: transform 0.2s;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}   
+
+.noti-bell svg {
+    color: #BD3433;
 }
 
-.job-card:hover {
-    transform: translateX(5px);
+.info-section {
+    margin: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
 }
 
-.job-info {
-    padding: 14px;
-    font-weight: 500;
+.info-section > h2 {
+    padding-left: 10px;
+    font-size: 24px;
+}   
+
+.driver-order-card, .noti-item, .order-detail-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-info, .noti-info {
     display: grid;
     grid-template-areas: 
         'name name name name name time'
-        'address address address address address time';
-    width: 100%;
+        'content content content content content time';
+    gap: 10px; /* Adjust gap as needed */
 }
 
-.customer-name {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
+.driver-order-card .title, .noti-item .title {
     grid-area: name;
+    font-weight: bold; /* Make title bold */
+    font-size: 20px; /* Adjust font size as needed */
     text-align: left;
 }
 
-.address {
-    font-size: 14px;
-    grid-area: address;
-    text-align: left;
-}
-
-.time {
-    font-size: 14px;
-    text-align: right;
+.driver-order-card .time, .noti-item .time {
     grid-area: time;
-    padding: 20px;
-    margin-right: 14px;
+    font-size: 16px; /* Adjust font size as needed */
+    color: #666; /* Adjust color as needed */
+    align-self: center; /* Center vertically if needed */
+    font-weight: 400;
+    text-align: right;
+}
+
+.driver-order-card .content, .noti-item .content {
+    grid-area: content;
+    font-weight: 400; /* Adjust font weight as needed */
+    text-align: left;
+}
+
+.arrow-btn {
+    width: 80px;
+    height: 40px;
+    margin-left: auto;
+    background: #f0f0f0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-btn svg {
+    color: #666;
+    font-size: 24px;
+}
+
+.bottom-nav {
+    position: fixed; /* Đặt vị trí tuyệt đối */
+    bottom: 20px; /* Khoảng cách từ dưới lên */
+    left: 50%; /* Căn giữa */
+    transform: translateX(-50%); /* Đẩy sang trái một nửa chiều rộng */
+    width: calc(100% - 40px); /* Chiều rộng của thanh nav */
+    background: #BD3433; /* Màu nền mới */
+    padding: 15px 0; /* Padding cho thanh nav */
+    display: flex;
+    justify-content: space-around; /* Căn giữa các mục */
+    border-radius: 15px; /* Bo góc */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    z-index: 1000; /* Đảm bảo nó nằm trên các phần tử khác */
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8); /* Màu chữ nhạt */
+}
+
+.nav-item.active {
+    color: white; /* Màu chữ khi active */
+}
+
+.icon {
+    font-size: 24px; /* Kích thước biểu tượng */
+    margin-bottom: 4px; /* Khoảng cách giữa biểu tượng và chữ */
+}
+
+.nav-item span {
+    font-size: 12px; /* Kích thước chữ */
+    font-weight: 400;
+}
+
+.driver-order-list {
+    padding: 10px;
+    padding-top: 60px;
+}
+
+.driver-order-card {
+    margin: 14px;
 }
 
 .button-group {
@@ -83,11 +140,13 @@
 }
 
 .btn-start, .btn-view, .btn-accept, .btn-reject {
-    width: 15%;
+    width: 90px;
+    border-radius: 20px;
 }
 
-.btn-view {
-    background-color: #E53935;
+.btn-view, .btn-start {
+    margin-left: auto;
+    background-color: #BD3433;
 }
 
 .btn-accept {
@@ -98,31 +157,83 @@
     background-color: #9e9e9e;
 }
 
+.button:hover {
+    opacity: 0.9;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    width: 800px; /* Chiều rộng pop-up */
+}
+
+.popup h2 {
+    margin-bottom: 20px;
+    color: #BD3433;
+}
+
+.popup .noti-list {
+    max-height: 500px; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Cho phép cuộn dọc */
+}
+
+.close-btn {
+    position: absolute; /* Định vị nút đóng */
+    top: 10px; /* Khoảng cách từ trên */
+    right: 10px; /* Khoảng cách từ bên phải */
+    background: none; /* Không có nền */
+    border: none; /* Không có viền */
+    cursor: pointer; /* Con trỏ khi di chuột */
+    font-size: 24px; /* Kích thước chữ */
+}
+
+.close-btn svg {
+    color: #BD3433; /* Màu chữ */
+}
+
 .customer-info {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 20px;
+    padding: 15px;
 }
 
-.customer-avatar {
-    width: 80px;
+.avatar {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 15px;
-}
-
-.customer-details {
-    flex-grow: 1;
-    text-align: left;
+    box-shadow: 5px 5px 10px var(--shadow-color),
+               -5px -5px 10px var(--light-shadow);
 }
 
 .customer-name {
-    font-weight: 600;
-    margin-bottom: 5px;
+    color: #BD3433;
+    font-size: 32px;  
 }
 
-.customer-id {
-    color: #666;
-    font-size: 14px;
+.order-detail-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 15px;
+}
+
+.order-detail-info .title {
+    font-weight: bold; /* Make title bold */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content {
     font-weight: 400;
 }
 
@@ -372,13 +483,6 @@
     width: 30%;
 }
 
-.info-section {
-    margin: 16px;
-    border-radius: 12px;
-    overflow: hidden;
-    text-align: left;
-}
-
 .info-item {
     margin: 20px 10px;
 }
@@ -421,31 +525,18 @@
     justify-content: center;
 }
 
-@media (max-width: 600px) {
-    .info {
-        font-size: 14px;
-    }
+.inline-info {  
+    display: flex; /* Ensure items are in a row */
+    align-items: center; /* Center items vertically */
+}
 
-    .button {
-        width: 100%;
-        font-size: 16px;
-    }
+.inline-info .title {
+    margin-left: 10px; 
+    margin-bottom: 0px;
+}
 
-    .customer-name {
-        font-size: 16px;
-    }
-
-    .customer-id {
-        font-size: 12px;
-    }
-
-    .trip-title {
-        font-size: 20px;
-    }
-
-    .trip-value {
-        font-size: 14px;
-    }
+.inline-info .content {
+    margin-left: 10px; /* Add space between title and content */
 }
 
 @media (max-width: 1000px) {
@@ -454,48 +545,29 @@
         font-size: 14px;
     }
 
-    .cur-job-content {
-        grid-template-columns: auto;
+    .popup {
+        width: 350px;
     }
 
-    .cur-job-info {
-        padding: 2px;
+    .info-section > h2 {
+        font-size: 20px;
+    }
+
+    .driver-order-card .title, .noti-item .title, .order-detail-info .title {
+        font-size: 18px;
+    }
+
+    .driver-order-card .content, .noti-item .content, .order-detail-info .content {
         font-size: 14px;
-        padding-left: 30px; 
-    }
-
-    .cur-job-btn {
-        width: 200px;
-        margin-top: 5px;
-    }
-
-    .job-info {
-        padding-bottom: 5px;
-    }
-
-    .customer-name {
-        font-size: 16px; /* Adjust font size */
-    }
-
-    .address {
-        font-size: 12px; /* Adjust font size */
-    }
-
-    .time {
-        font-size: 12px; /* Adjust font size */
     }
 
     .button-group {
-        margin: 0px 20px;
+        margin: 0px;
+        margin-left: auto;
     }
 
     .customer-avatar {
         width: 60px;
-    }
-
-    .action-buttons {
-        flex-direction: column; /* Stack buttons vertically */
-        margin-bottom: 10px;
     }
 
     .btn-call, .btn-message {
